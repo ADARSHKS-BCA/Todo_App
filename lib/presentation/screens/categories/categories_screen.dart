@@ -10,10 +10,10 @@ class CategoriesScreen extends ConsumerWidget {
   const CategoriesScreen({super.key});
 
   final List<Map<String, dynamic>> categoryConfig = const [
-    {'name': 'Grocery', 'icon': Icons.local_grocery_store, 'color': AppTheme.mintGreen},
-    {'name': 'Health', 'icon': Icons.favorite, 'color': AppTheme.peach},
-    {'name': 'Work', 'icon': Icons.work, 'color': AppTheme.babyBlue},
-    {'name': 'Personal', 'icon': Icons.person, 'color': AppTheme.lavender},
+    {'name': 'Grocery', 'icon': Icons.local_grocery_store, 'color': AppTheme.warning},
+    {'name': 'Health', 'icon': Icons.favorite, 'color': AppTheme.error},
+    {'name': 'Work', 'icon': Icons.work, 'color': AppTheme.accent},
+    {'name': 'Personal', 'icon': Icons.person, 'color': AppTheme.success},
   ];
 
   @override

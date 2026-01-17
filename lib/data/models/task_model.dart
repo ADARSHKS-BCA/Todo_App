@@ -17,11 +17,17 @@ class TaskModel extends HiveObject {
   @HiveField(3)
   final DateTime date;
 
+  // Alias for code readability in UI
+  DateTime? get dueDate => date;
+
   @HiveField(4)
   final String category;
 
   @HiveField(5)
   bool isCompleted;
+
+  @HiveField(6)
+  final String priority; // Low, Medium, High
 
   TaskModel({
     required this.id,
@@ -30,6 +36,7 @@ class TaskModel extends HiveObject {
     required this.date,
     required this.category,
     this.isCompleted = false,
+    this.priority = 'Medium',
   });
 
   factory TaskModel.create({
@@ -37,6 +44,7 @@ class TaskModel extends HiveObject {
     String? description,
     required DateTime date,
     required String category,
+    String priority = 'Medium',
   }) {
     return TaskModel(
       id: const Uuid().v4(),
@@ -44,6 +52,7 @@ class TaskModel extends HiveObject {
       description: description,
       date: date,
       category: category,
+      priority: priority,
     );
   }
 }
